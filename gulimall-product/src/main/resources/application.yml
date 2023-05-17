@@ -1,0 +1,44 @@
+spring:
+  # MySQL数据库相关配置
+  datasource:
+    url: jdbc:mysql://121.4.103.68:3306/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 127.0.0.1:8848
+    alicloud:
+      access-key: LTAI5tDuZg53ZUmSoJKYxpAP
+      secret-key: yAEHNt1jS5Eg42dY3RjwxN5Jpi3Q3I
+      oss:
+        endpoint: oss-cn-shanghai.aliyuncs.com
+  application:
+    name: gulimall-product
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+# 配置 MyBatis-plus
+mybatis-plus:
+  # 指定 mapper.xml 的位置
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+
+server:
+  port: 10001
+  error:
+    include-message: always
+    include-binding-errors: always
+logging:
+  level:
+    com.atguigu.gulimall: debug
+
