@@ -42,6 +42,10 @@ public class SpuInfoEntity implements Serializable {
 	 */
 	private Long brandId;
 	/**
+	 * 品牌名
+	 */
+	private String brandName;
+	/**
 	 * 
 	 */
 	private BigDecimal weight;

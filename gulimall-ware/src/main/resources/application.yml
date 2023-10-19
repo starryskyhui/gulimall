@@ -1,7 +1,7 @@
 spring:
   # MySQL数据库相关配置
   datasource:
-    url: jdbc:mysql://121.4.103.68:3306/gulimall_wms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://121.4.103.68:3307/gulimall_wms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver

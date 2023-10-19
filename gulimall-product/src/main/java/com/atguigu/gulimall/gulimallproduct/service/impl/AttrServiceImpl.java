@@ -245,4 +245,13 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
         IPage<AttrEntity> page = this.page(new Query<AttrEntity>().getPage(params), queryWrapper);
         return new PageUtils(page);
     }
+
+    @Override
+    public List<Long> selectSearchAttrs(List<Long> attrIds) {
+
+        /**
+         * select attr_id from `pms_attr` where attr_id in (?) and search_type=1
+         */
+        return baseMapper.selectSearchAttrIds(attrIds);
+    }
 }

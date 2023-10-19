@@ -10,6 +10,11 @@ spring:
       oss:
         endpoint: oss-cn-shanghai.aliyuncs.com
         bucket: gulimall-starrysky
+      sms:
+        host: https://dfsns.market.alicloudapi.com
+        path: /data/send_sms
+        skin: CST_ptdie100
+        appCode: 3b271f09298046dbb81acfe273dcdedc
   application:
     name: gulimall-third-party
 

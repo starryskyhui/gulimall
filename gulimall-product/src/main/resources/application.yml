@@ -1,7 +1,7 @@
 spring:
   # MySQL数据库相关配置
   datasource:
-    url: jdbc:mysql://121.4.103.68:3306/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://121.4.103.68:3307/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -20,6 +20,11 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  thymeleaf:
+    cache: false
+  redis:
+    host: 121.4.103.68
+    port: 6379
 
 # 配置 MyBatis-plus
 mybatis-plus:
@@ -41,4 +46,5 @@ server:
 logging:
   level:
     com.atguigu.gulimall: debug
+
 
